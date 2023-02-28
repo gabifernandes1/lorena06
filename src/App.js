@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
-import Fundo from './lorena-fundo.svg';
-import Fundo2 from './lorena-informacoes.svg';
-import Logo from './lorena-menu.svg';
+import Fundo from './lorena-fundo.png';
+import Fundo2 from './lorena-informacoes.png';
+import Logo from './lorena-menu.png';
 import lorenaPc from './lorena-pc.GIF'
 import voltar from './voltar.png'
 import Mais from './mais.png'
