@@ -398,14 +398,14 @@ font-size: 1.1rem;
 	z-index: 1;
 	position: absolute;
 	color: white;
-	width: 71.3vw;
+	width: fit-content;
 	background-color: rgb(100, 0, 79);
 	padding: 1rem 1.5rem 1.2rem;
 	border: 1px solid rgba(255, 255, 255, 0.508);
 	/* border-radius: 10px; */
  	/* text-align: end !important; */
 	margin-top: 1rem;
-	top: 37.2%;
+	top: 38%;
 	right: 1rem;
 	/* width: 100%; */
 	
