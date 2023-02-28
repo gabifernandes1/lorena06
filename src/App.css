@@ -123,19 +123,23 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 	letter-spacing: 0.05rem;
 }
 #pagina3 {
-	z-index: 9999; position: fixed; left: 0; top: 0; 
-
-	height: 131%;
-	width: 100vw;
+	/* overflow: scroll !important; */
+	scroll-snap-align: start !important;
 	background-color: white;
-	position: absolute;
-	top: 0;
-	left: 0px;
+	width: 100vw;
+
 	display: flex;
 	flex-direction: column;
-	overflow: hidden;
-	justify-content: center;
+	/* justify-content: center; */
+	/* padding-top: 10vh; */
 	align-items: center;
+	top: 0;
+	left: 0;
+}
+#img4{
+	position: absolute;
+	width: 100vw;
+	overflow-Y: hidden;
 }
 
 #pagina3 img {
@@ -370,28 +374,39 @@ font-size: 1.1rem;
 	left: 5vw;
 }
 .como-chegar{
+	font-size: 0.8rem !important;
 	position: absolute;
-	top:41%;
-	/* left: 8vw; */
-	/* text-decoration: underline; */
+	/* top: 330px;
+	right: 5%; */
+	top: 35%;
+	right: 1rem;
+	z-index: 1;
 	color: rgb(251, 210, 255);
 	font-weight: bold;
 	letter-spacing: 0.02rem;
 	border: 1px solid;
 	padding: 0.5rem;
+	min-width: 120px;
+	width: 10%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
 	
 }
 #mais{
+	z-index: 1;
 	position: absolute;
 	color: white;
-font-size: 1.1rem;
 	width: 71.3vw;
 	background-color: rgb(100, 0, 79);
-	padding: 0rem 1.5rem 1.2rem;
+	padding: 1rem 1.5rem 1.2rem;
 	border: 1px solid rgba(255, 255, 255, 0.508);
 	/* border-radius: 10px; */
+ 	/* text-align: end !important; */
 	margin-top: 1rem;
-	top: 51.21vh;
+	top: 37.2%;
+	right: 1rem;
 	/* width: 100%; */
 	
 }
@@ -412,7 +427,9 @@ font-size: 1.1rem;
 	font-size: 1rem !important;
 	display: flex;
 	align-items: center;
-	text-align: left !important;
+	font-size: 0.8rem !important;
+
+	text-align: right !important;
 }
 #mais p{
 	margin: 2vh 0vh 2vh 0vh;

@@ -180,7 +180,7 @@ export default function App() {
 				<Slide direction="up" in={pagina2} mountOnEnter unmountOnExit>
 					<div id="pagina2">
 
-						<img id="img2" src={Logo} width="50%" />
+						<img id="img2" src={Logo} />
 						{notFound ? (
 								<p
 									style={{
@@ -229,7 +229,7 @@ export default function App() {
 						<p id="ola">Olá, {convidado?.nome}!</p>
 						<img src={voltar} className="voltar" height="30px" onClick={() => { setPagina2(true); setPagina3(false); setConvidado(null);  setTelefone(null)}}/> 
 						{mais ? <div id="mais">
-							<p onClick={() => setMais(false)}>X</p>
+							{/* <p onClick={() => setMais(false)} style={{fontSize: "0.7rem"}}>X</p> */}
 							{/* A 650 metros da Cidade das Abelhas.
 Vir pelo embu, por outro caminho pega rua de terra.
 							Ao chegar na cidade das abelhas 🐝 mantenha-se a direita! 
@@ -241,12 +241,12 @@ Vir pelo embu, por outro caminho pega rua de terra.
 							
 							
 						</div> : null}
-						<div onClick={()=>setMais(!mais)} className="como-chegar">COMO CHEGAR   <img src={!mais ? Mais : Menos} height="12vh" style={{marginLeft: "0.5rem"}}/></div>
 						<img src={Fundo2} id="img4" />
 						<br />
 						<div className="seta" onClick={handleChange4}>					
 								<img className="seta-animation" src={Seta} height="30%" />
 							</div>
+						<div onClick={()=>setMais(!mais)} className="como-chegar">COMO CHEGAR   <img src={!mais ? Mais : Menos} height="12vh" style={{marginLeft: "0.5rem"}}/></div>
 					</div>
 				</Slide>
 			) : (
