@@ -8,6 +8,7 @@ import voltar from './voltar.png'
 import Mais from './mais.png'
 import Menos from './menos.png'
 import Waze from './waze.png'
+import Maps from './google-maps.png'
 
 import Individual from './individuall.png';
 import Seta from './seta.png';
@@ -43,6 +44,7 @@ export default function App() {
 	const [convidado, setConvidado] = useState();
 
 	function handleChange() {
+		
 		setPagina2(true);
 		setPagina1(false);
 	}
@@ -64,6 +66,7 @@ export default function App() {
 
 
 	async function handleChange3() {
+		setMais(false)
 		setLoading(true);
 		let tel = undefined;
 		if (telefone !== undefined && telefone !== '' && telefone !== null) {
@@ -92,6 +95,7 @@ export default function App() {
 		
 	}
 	async function handleChange4() {
+		setMais(false)
 		setLoading(true);
 		// let tel = undefined;
 		// if (telefone !== undefined && telefone !== '') {
@@ -180,8 +184,8 @@ export default function App() {
 								<p
 									style={{
 										position: 'absolute',
-										color: 'white',
-										bottom: '20vh',
+										color: 'yellow',
+										top: '58vh',
 										textAlign: 'center',
 										fontSize: '1.3rem',
 									width: "100vw",
@@ -221,7 +225,7 @@ export default function App() {
 			{pagina3 && convidado !== null ? (
 				<Slide direction="up" in={pagina3} mountOnEnter unmountOnExit>
 					<div id="pagina3">
-						<p id="ola">Olá, {convidado?.nome}</p>
+						<p id="ola">Olá, {convidado?.nome}!</p>
 						<img src={voltar} className="voltar" height="30px" onClick={() => { setPagina2(true); setPagina3(false); setConvidado(null);  setTelefone(null)}}/> 
 						{mais ? <div id="mais">
 							<p onClick={() => setMais(false)}>X</p>
@@ -230,7 +234,8 @@ Vir pelo embu, por outro caminho pega rua de terra.
 							Ao chegar na cidade das abelhas 🐝 mantenha-se a direita! 
 							<br/> */}
 							<p id="waze-text">
-							Acesse a viagem pelo Waze:	<a href="https://waze.com/ul?a=share_drive&locale=pt_BR&sd=cRHHR64k4bG9NxLZUA-sd&env=row&utm_source=waze_app&utm_campaign=share_drive"><img src={Waze} id="waze" /></a>
+							Acesse a viagem:	<a href="https://waze.com/ul/h6gy9hxj1k"><img src={Waze} id="waze" /></a>
+							<a href="https://maps.app.goo.gl/ksWtybNY7rq2Mge19?g_st=ia"><img src={Maps} id="waze" /></a>
 							</p>
 							
 							
