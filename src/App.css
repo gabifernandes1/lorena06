@@ -371,8 +371,8 @@ font-size: 1.1rem;
 }
 .como-chegar{
 	position: absolute;
-	top:355px ;
-	left: 8vw;
+	top:41%;
+	/* left: 8vw; */
 	/* text-decoration: underline; */
 	color: rgb(251, 210, 255);
 	font-weight: bold;
