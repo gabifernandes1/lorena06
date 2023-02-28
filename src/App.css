@@ -355,6 +355,7 @@ font-size: 1.1rem;
 }
 #lorena-pc{
 	position: absolute;
+	border-radius: 100%;
 }
 .voltar{
 	position: absolute;
@@ -368,6 +369,8 @@ font-size: 1.1rem;
 	text-decoration: underline;
 	color: rgb(251, 210, 255);
 	font-weight: bold;
+	letter-spacing: 0.06rem;
+	
 }
 #mais{
 	position: absolute;
@@ -375,8 +378,9 @@ font-size: 1.1rem;
 font-size: 1.1rem;
 	width: 80vw;
 	background-color: rgb(100, 0, 79);
-	padding: 1rem 1.5rem;
-	border: 1px solid white;
+	padding: 0rem 1.5rem 0.5rem;
+	border: 1px solid rgba(255, 255, 255, 0.508);
+	border-radius: 10px;
 	margin-top: 1rem;
 	top: 45vh;
 	/* width: 100%; */
@@ -394,10 +398,12 @@ font-size: 1.1rem;
 	margin-left: 70vw;
 }
 #mais p{
-	margin: 0px;
+	margin: 2vh 0vh 0vh 0vh;
 	width: 100%;
 	text-align: end;
 	color: red;
+	
+	
 }
 
 #ola{

@@ -180,16 +180,16 @@ export default function App() {
 								<p
 									style={{
 										position: 'absolute',
-										color: 'black',
+										color: 'white',
 										bottom: '20vh',
 										textAlign: 'center',
-										fontSize: '1.2rem',
+										fontSize: '1.3rem',
 									width: "100vw",
-										fontWeight: "bold"
+									fontFamily:" 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif"
+
 									}}
 								>
 									Convidado não encontrado. <br />
-									Tente novamente!
 								</p>
 							) : (
 								''
@@ -278,7 +278,7 @@ Vir pelo embu, por outro caminho pega rua de terra.
 						<img src={lorenaPc} alt="loading..." id="lorena-pc" />
 
 					<img src={voltar} className="voltar" height="30px" onClick={() => { setPagina3(true); setPagina5(false)}}/> 
-						<p>Obrigada pela confirmação!</p>
+						<p style={{fontFamily:"'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif"}}>Anotado!</p>
 					</div>
 				</Slide>
 			) : (
