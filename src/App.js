@@ -186,7 +186,7 @@ export default function App() {
 									style={{
 										position: 'absolute',
 										color: 'yellow',
-										top: '58vh',
+										top: '60vh',
 										textAlign: 'center',
 										fontSize: '1.3rem',
 									width: "100vw",
