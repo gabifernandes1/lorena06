@@ -37,6 +37,7 @@ export default function App() {
 	const [notFound, setNotFound] = useState(false);
 	const [loading, setLoading] = useState(false);
 	const [mais, setMais] = useState(false);
+	const [vou, setVou] = useState(false);
 
 	const [nome, setNome] = useState('');
 	const [telefone, setTelefone] = useState('');
@@ -53,7 +54,7 @@ export default function App() {
 		let data = { data: convidado, confirmacao: 'S' };
 		await axios
 			.post(`${process.env.REACT_APP_URL}/confirmacao`, data)
-			.then(setPagina5(true), setPagina4(false));
+			.then(setPagina5(true), setPagina4(false), setVou(true));
 
 	}
 
@@ -61,7 +62,7 @@ export default function App() {
 		let data = { data: convidado, confirmacao: 'N' };
 		await axios
 			.post(`${process.env.REACT_APP_URL}/confirmacao`, data)
-			.then(setPagina5(true), setPagina4(false));
+			.then(setPagina5(true), setPagina4(false),setVou(false));
 	}
 
 
@@ -286,7 +287,8 @@ Vir pelo embu, por outro caminho pega rua de terra.
 						<img src={lorenaPc} alt="loading..." id="lorena-pc" />
 
 					<img src={voltar} className="voltar" height="30px" onClick={() => { setPagina3(true); setPagina5(false)}}/> 
-						<p style={{color: "white",fontFamily:"'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif"}}>Hmmm, anotado!</p>
+						{!vou ? 						<p style={{ color: "white", fontFamily: "'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif" }}>Poxa, que pena!! 😢</p>
+ : <p style={{ color: "white", fontFamily: "'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif" }}>Uhuu, te espero lá!! ❤️</p>}
 					</div>
 				</Slide>
 			) : (
