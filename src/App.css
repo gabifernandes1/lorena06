@@ -398,3 +398,11 @@ font-size: 1.1rem;
 	text-align: end;
 	color: red;
 }
+
+#ola{
+	position: absolute;
+	top: 26vh;
+	color: rgb(251, 210, 255);
+	font-size: 1.2rem !important;
+	
+}

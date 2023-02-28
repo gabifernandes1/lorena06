@@ -48,171 +48,76 @@ export default function App() {
 	}
 
 	async function vai() {
-		// let data = { data: convidado, confirmacao: 'S' };
-		// await axios
-		// 	.post(`${process.env.REACT_APP_URL3}`, data)
-		// 	.then(setPagina4(true), setPagina3(false));
-		// setPagina4(true)
-		setPagina5(true)
-		setPagina4(false)
+		let data = { data: convidado, confirmacao: 'S' };
+		await axios
+			.post(`${process.env.REACT_APP_URL}/confirmacao`, data)
+			.then(setPagina5(true), setPagina4(false));
+
 	}
 
 	async function naoVai() {
-		// let data = { data: convidado, confirmacao: 'N' };
-		// await axios
-		// 	.post(`${process.env.REACT_APP_URL3}`, data)
-		// 	.then(setPagina5(true), setPagina3(false));
-		setPagina5(true)
-		setPagina4(false)
+		let data = { data: convidado, confirmacao: 'N' };
+		await axios
+			.post(`${process.env.REACT_APP_URL}/confirmacao`, data)
+			.then(setPagina5(true), setPagina4(false));
 	}
 
-	const VIP = process.env.REACT_APP_VIP;
-	async function handleChange03() {
-		// setLoading(true);
-		// let tel = undefined;
-		// if (telefone !== undefined && telefone !== '') {
-		// 	tel = telefone.replace(/ /g, '').replace('-', '');
-		// }
-		// if (nome == VIP) {
-		// 	setLoading(true);
 
-		// 	let novo = await axios.post(`${process.env.REACT_APP_URL2}`, {
-		// 		nome: 'vip',
-		// 		vou: '',
-		// 		ENTROU: 'N',
-		// 	});
-
-		// 	setPagina3(true);
-		// 	setPagina2(false);
-		// 	setConvidado({
-		// 		_id: novo.data.insertedId,
-		// 		nome: 'vip',
-		// 		vou: '',
-		// 		ENTROU: 'N',
-		// 	});
-		// 	setLoading(false);
-		// }
-		// for (let i in convidados) {
-		// 	if (tel) {
-		// 		if (convidados[i].telefone == tel) {
-	
-		// 		} else {
-		// 			setLoading(false);
-		// 			setNotFound(true);
-		// 			setTimeout(() => {
-		// 				setNotFound(false);
-		// 			}, 3000);
-		// 		}
-		// 	} else {
-		// 		setLoading(false);
-		// 		setNotFound(true);
-		// 		setTimeout(() => {
-		// 			setNotFound(false);
-		// 		}, 3000);
-		// 	}
-		// }
-	}
 	async function handleChange3() {
-		// setLoading(true);
-		// let tel = undefined;
-		// if (telefone !== undefined && telefone !== '') {
-		// 	tel = telefone.replace(/ /g, '').replace('-', '');
-		// }
-		// if (nome == VIP) {
-		// 	setLoading(true);
-
-		// 	let novo = await axios.post(`${process.env.REACT_APP_URL2}`, {
-		// 		nome: 'vip',
-		// 		vou: '',
-		// 		ENTROU: 'N',
-		// 	});
-
-		// 	setPagina3(true);
-		// 	setPagina2(false);
-		// 	setConvidado({
-		// 		_id: novo.data.insertedId,
-		// 		nome: 'vip',
-		// 		vou: '',
-		// 		ENTROU: 'N',
-		// 	});
-		// 	setLoading(false);
-		// }
-		// for (let i in convidados) {
-		// 	if (tel) {
-		// 		if (convidados[i].telefone == tel) {
+		setLoading(true);
+		let tel = undefined;
+		if (telefone !== undefined && telefone !== '' && telefone !== null) {
+			tel = telefone.replace(/ /g, '').replace('-', '');
+		} else {
+			setLoading(false);
+			setNotFound(true);
+			setTimeout(() => {
+				setNotFound(false);
+			}, 3000);
+		}
+			let convidadoFind = convidados.find(({ telefone }) => telefone == tel);
+				if (convidadoFind && tel) {
 					setLoading(false);
-					setConvidado({nome: "gabi", _id: "1234"});
+					setConvidado(convidadoFind);
 					setPagina3(true);
 					setPagina2(false);
-		// 		} else {
-		// 			setLoading(false);
-		// 			setNotFound(true);
-		// 			setTimeout(() => {
-		// 				setNotFound(false);
-		// 			}, 3000);
-		// 		}
-		// 	} else {
-		// 		setLoading(false);
-		// 		setNotFound(true);
-		// 		setTimeout(() => {
-		// 			setNotFound(false);
-		// 		}, 3000);
-		// 	}
-		// }
-	}
+				} else {
+					setLoading(false);
+					setNotFound(true);
+					setTimeout(() => {
+						setNotFound(false);
+					}, 3000);
+				}
 
+		
+	}
 	async function handleChange4() {
-		// setLoading(true);
+		setLoading(true);
 		// let tel = undefined;
 		// if (telefone !== undefined && telefone !== '') {
 		// 	tel = telefone.replace(/ /g, '').replace('-', '');
 		// }
-		// if (nome == VIP) {
-		// 	setLoading(true);
+		// let convidadoFind = convidados.find(({ telefone }) => telefone == tel);
 
-		// 	let novo = await axios.post(`${process.env.REACT_APP_URL2}`, {
-		// 		nome: 'vip',
-		// 		vou: '',
-		// 		ENTROU: 'N',
-		// 	});
-
-		// 	setPagina3(true);
-		// 	setPagina2(false);
-		// 	setConvidado({
-		// 		_id: novo.data.insertedId,
-		// 		nome: 'vip',
-		// 		vou: '',
-		// 		ENTROU: 'N',
-		// 	});
+		// if (convidadoFind) {
+			setLoading(false);
+			// setConvidado(convidadoFind);
+			setPagina4(true);
+			setPagina3(false);
+		// } else {
 		// 	setLoading(false);
-		// }
-		// for (let i in convidados) {
-		// 	if (tel) {
-		// 		if (convidados[i].telefone == tel) {
-					setLoading(false);
-					setConvidado({nome: "gabi", _id: "1234"});
-					setPagina4(true);
-					setPagina3(false);
-		// 		} else {
-		// 			setLoading(false);
-		// 			setNotFound(true);
-		// 			setTimeout(() => {
-		// 				setNotFound(false);
-		// 			}, 3000);
-		// 		}
-		// 	} else {
-		// 		setLoading(false);
-		// 		setNotFound(true);
-		// 		setTimeout(() => {
-		// 			setNotFound(false);
-		// 		}, 3000);
+		// 	setNotFound(true);
+		// 	setTimeout(() => {
+		// 		setNotFound(false);
+		// 	}, 3000);
+		
 		// 	}
-		// }
+		
 	}
 
 	useEffect(() => {
 		async function getData() {
-			await axios.get(`${process.env.REACT_APP_URL}`).then((response) => {
+			await axios.get(`${process.env.REACT_APP_URL}/getConvidados`).then((response) => {
 				setConvidados(response.data);
 			});
 		}
@@ -223,6 +128,7 @@ export default function App() {
 		<div className="App">
 			{loading ? (
 				<div id="loading">
+					oiiiiiii
 					<div style={{ width: 50, height: 50 }}>
 						<ChangingProgressProvider values={[100, 0]}>
 							{(percentage) => (
@@ -264,11 +170,30 @@ export default function App() {
 			) : (
 				''
 			)}
+			
 			{pagina2 ? (
 				<Slide direction="up" in={pagina2} mountOnEnter unmountOnExit>
 					<div id="pagina2">
 
 						<img id="img2" src={Logo} width="50%" />
+						{notFound ? (
+								<p
+									style={{
+										position: 'absolute',
+										color: 'black',
+										bottom: '20vh',
+										textAlign: 'center',
+										fontSize: '1.2rem',
+									width: "100vw",
+										fontWeight: "bold"
+									}}
+								>
+									Convidado não encontrado. <br />
+									Tente novamente!
+								</p>
+							) : (
+								''
+							)}
 						<img src={voltar} className="voltar" height="30px" onClick={() => { setPagina1(true); setPagina2(false)}}/> 
 						<div id="form">
 							<p>Digite seu telefone:</p>
@@ -279,22 +204,7 @@ export default function App() {
 									onChange={(e) => setTelefone(e.target.value)}
 								/>
 							</div>
-							{notFound ? (
-								<p
-									style={{
-										position: 'absolute',
-										color: 'red',
-										bottom: '1vh',
-										textAlign: 'center',
-										fontSize: '1.2rem',
-									}}
-								>
-									Convidado não encontrado. <br />
-									Tente novamente!
-								</p>
-							) : (
-								''
-							)}
+						
 						</div>
 
 							<div className="seta" onClick={handleChange3}>
@@ -308,10 +218,11 @@ export default function App() {
 			)}
 
 
-			{pagina3 ? (
+			{pagina3 && convidado !== null ? (
 				<Slide direction="up" in={pagina3} mountOnEnter unmountOnExit>
 					<div id="pagina3">
-					<img src={voltar} className="voltar" height="30px" onClick={() => { setPagina2(true); setPagina3(false)}}/> 
+						<p id="ola">Olá, {convidado?.nome}</p>
+						<img src={voltar} className="voltar" height="30px" onClick={() => { setPagina2(true); setPagina3(false); setConvidado(null);  setTelefone(null)}}/> 
 						{mais ? <div id="mais">
 							<p onClick={()=>setMais(false)}>X</p>A 650 metros da Cidade das Abelhas.
 Vir pelo embu, por outro caminho pega rua de terra.
