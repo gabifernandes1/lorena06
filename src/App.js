@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
-import Fundo from './lorena-fundo.png';
+import Fundo from './lorena-fundo.svg';
 import Fundo2 from './lorena-informacoes.svg';
 import Logo from './lorena-menu.svg';
 import lorenaPc from './lorena-pc.GIF'
@@ -224,15 +224,18 @@ export default function App() {
 						<p id="ola">Olá, {convidado?.nome}</p>
 						<img src={voltar} className="voltar" height="30px" onClick={() => { setPagina2(true); setPagina3(false); setConvidado(null);  setTelefone(null)}}/> 
 						{mais ? <div id="mais">
-							<p onClick={()=>setMais(false)}>X</p>A 650 metros da Cidade das Abelhas.
+							<p onClick={() => setMais(false)}>X</p>
+							{/* A 650 metros da Cidade das Abelhas.
 Vir pelo embu, por outro caminho pega rua de terra.
 							Ao chegar na cidade das abelhas 🐝 mantenha-se a direita! 
-							<br/>
-							<a href="https://waze.com/ul?a=share_drive&locale=pt_BR&sd=cRHHR64k4bG9NxLZUA-sd&env=row&utm_source=waze_app&utm_campaign=share_drive"><img src={Waze} id="waze"/></a>
+							<br/> */}
+							<p id="waze-text">
+							Acesse a viagem pelo Waze:	<a href="https://waze.com/ul?a=share_drive&locale=pt_BR&sd=cRHHR64k4bG9NxLZUA-sd&env=row&utm_source=waze_app&utm_campaign=share_drive"><img src={Waze} id="waze" /></a>
+							</p>
 							
 							
 						</div> : null}
-						<div onClick={()=>setMais(!mais)} className="como-chegar">MAIS INFORMAÇÕES   <img src={!mais ? Mais : Menos} height="12vh" style={{marginLeft: "0.5rem"}}/></div>
+						<div onClick={()=>setMais(!mais)} className="como-chegar">COMO CHEGAR   <img src={!mais ? Mais : Menos} height="12vh" style={{marginLeft: "0.5rem"}}/></div>
 						<img src={Fundo2} id="img4" />
 						<br />
 						<div className="seta" onClick={handleChange4}>					
@@ -278,7 +281,7 @@ Vir pelo embu, por outro caminho pega rua de terra.
 						<img src={lorenaPc} alt="loading..." id="lorena-pc" />
 
 					<img src={voltar} className="voltar" height="30px" onClick={() => { setPagina3(true); setPagina5(false)}}/> 
-						<p style={{fontFamily:"'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif"}}>Anotado!</p>
+						<p style={{color: "white",fontFamily:"'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif"}}>Hmmm, anotado!</p>
 					</div>
 				</Slide>
 			) : (
