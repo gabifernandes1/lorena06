@@ -287,8 +287,8 @@ Vir pelo embu, por outro caminho pega rua de terra.
 						<img src={lorenaPc} alt="loading..." id="lorena-pc" />
 
 					<img src={voltar} className="voltar" height="30px" onClick={() => { setPagina3(true); setPagina5(false)}}/> 
-						{!vou ? 						<p style={{ color: "white", fontFamily: "'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif" }}>Poxa, que pena!! 😢</p>
- : <p style={{ color: "white", fontFamily: "'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif" }}>Uhuu, te espero lá!! ❤️</p>}
+						{!vou ? 						<p id="end" style={{ color: "white", fontFamily: "'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif" }}>Poxa, que pena!! 😢</p>
+ : <p id="end" style={{ color: "white", fontFamily: "'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif" }}>Uhuu, te espero lá!! ❤️</p>}
 					</div>
 				</Slide>
 			) : (

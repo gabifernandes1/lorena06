@@ -124,12 +124,13 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 #pagina3 {
 	z-index: 9999; position: fixed; left: 0; top: 0; 
-/* 
-	height: 100%; */
+
+	height: 131%;
 	width: 100vw;
 	background-color: white;
 	position: absolute;
 	top: 0;
+	left: 0px;
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
@@ -355,12 +356,13 @@ font-size: 1.1rem;
 }
 #img5{
 	position: absolute;
-	top: 0px
+	top: 0px;
+	width: 100vw;
 }
 #lorena-pc{
 	position: absolute;
 	border-radius: 100%;
-	top: 32vh;
+	top: 33vh;
 }
 .voltar{
 	position: absolute;
@@ -369,7 +371,7 @@ font-size: 1.1rem;
 }
 .como-chegar{
 	position: absolute;
-	top: 47vh;
+	top: 48vh;
 	left: 8vw;
 	/* text-decoration: underline; */
 	color: rgb(251, 210, 255);
@@ -427,4 +429,8 @@ font-size: 1.1rem;
 	color: rgb(251, 210, 255);
 	font-size: 1.2rem !important;
 	
+}
+#end{
+	/* position: sabsolute; */
+	/* top: 20vh; */
 }
